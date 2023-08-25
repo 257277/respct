@@ -38,10 +38,5 @@ This project implements a backend API using Python Flask framework with MongoDB 
 - Flask
 - MongoDB
 
-## Setup
+# Frontend with react and chakraUI
 
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/yourusername/your-backend-repo.git
-   cd your-backend-repo
