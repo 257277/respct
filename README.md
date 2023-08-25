@@ -1,28 +1,26 @@
-Backend:
+# Flask Backend with MongoDB
 
+This project implements a backend API using Python Flask framework with MongoDB as the database. It provides endpoints for user authentication and message generation.
 
-Backend is done with the help of Python Flask and Database i used is MongoDB   /n
+## Table of Contents
 
-Routes:  /n
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [API Endpoints](#api-endpoints)
+  - [Login](#login)
+  - [Register](#register)
+  - [Generate Message](#generate-message)
 
-(1) Login: http://127.0.0.1:5002/login     /n
-    Method: POST/n
-    Body example:/n     
-                  {/n
-                      "email":"a@gmail.com",/n
-                      "password":"a123"/n
-                  }/n
-(2) Register: http://127.0.0.1:5002/register
-    Method: POST
-    Body example:      
-                  {
-                      "name":"a"
-                      "email":"a@gmail.com",
-                      "password":"a123"
-                  }
-(3) Generate Response: http://127.0.0.1:5002/generate-message
-    Method: POST
-    Body example:      
-                  {
-                    "prompt": "Tell me how to learn helicopter"
-                  }
+## Technologies Used
+
+- Python
+- Flask
+- MongoDB
+
+## Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/your-backend-repo.git
+   cd your-backend-repo
