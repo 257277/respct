@@ -7,3 +7,57 @@
     left: 2.5%;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
+
+.mymsg {
+
+    background: #6064e4;
+    color: white;
+    margin-left: auto;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    position: relative;
+    font-size: 20px;
+    margin-right: 50px;
+    border-radius: 10px;
+
+}
+
+.message__area {
+    height: 650px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding-top: 40px;
+    width: 95%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 10px;
+}
+
+.message {
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    max-width: 300px;
+    position: relative;
+}
+
+.incoming {
+    width: 60%;
+    background: #8F8BE8;
+    color: Black;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.outgoing {
+    margin-top: 50px;
+    width: 60%;
+    background: #e9eafd;
+    color: Black;
+    margin-left: auto;
+    font-size: 25px;
+}

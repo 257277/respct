@@ -19,7 +19,7 @@ export default function LoginSignup()
       };
   
       try {
-        const res = await fetch(`http://127.0.0.1:3333/login`, {
+        const res = await fetch(`http://127.0.0.1:5002/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -29,15 +29,16 @@ export default function LoginSignup()
   
         if (res.ok) {
           const data = await res.json();
-  
+          console.log(data);
           const {token} = data;
           sessionStorage.setItem("token", JSON.stringify(token));
-          sessionStorage.setItem("email", JSON.stringify(data.user));
-          alert(data.msg);
+          sessionStorage.setItem("id", JSON.stringify(data.id));
+          sessionStorage.setItem("numberofMessage",0);
+          alert(data.message);
           navigate("/message");
         } else {
           const errorData = await res.json();
-          alert(errorData.msg); 
+          alert(errorData.message); 
         }
       } catch (error) {
         console.error(error);
@@ -53,7 +54,7 @@ export default function LoginSignup()
       };
   
       try {
-        const res = await fetch(`http://127.0.0.1:3333/register`, {
+        const res = await fetch(`http://127.0.0.1:5002/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
@@ -63,10 +64,10 @@ export default function LoginSignup()
   
         if (res.ok) {
           const data = await res.json();
-          alert(data.msg);
+          alert(data.message);
         } else {
           const errorData = await res.json();
-          alert(errorData.msg);
+          alert(errorData.message);
         }
       } catch (error) {
         console.error(error);
