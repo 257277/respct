@@ -9,7 +9,6 @@ export default function Message() {
   const [messages, setMessages] = useState([]);
   const navigate = useNavigate();
   const messageAreaRef = useRef(null);
-const [totalconversation,settotalconversation]=useState(JSON.parse(sessionStorage.getItem("numberofMessage")));
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
@@ -22,9 +21,11 @@ const [totalconversation,settotalconversation]=useState(JSON.parse(sessionStorag
 
   async function sendMsg() {
     let token = JSON.parse(sessionStorage.getItem("token"));
-    if (token === undefined) {
+    console.log(token);
+    if (token === null) {
       alert("Please login first!");
       navigate("/");
+      sessionStorage.clear();
     } else if(JSON.parse(sessionStorage.getItem("numberofMessage"))>=25)
     {
       alert("Your conversion limit is expired");
